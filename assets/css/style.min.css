@@ -3,7 +3,7 @@
     --bg-color: #000000b0;
     --text-color: #180e41;
     --accent-color: #ffffff;
-    --text-hover-color: #e3d5ca
+    --text-hover-color: #e3d5ca;
 }
 
 
@@ -14,7 +14,7 @@
 *::after {
     margin: 0;
     padding: 0;
-    box-sizing: border-box
+    box-sizing: border-box;
 }
 
 html,
@@ -22,12 +22,12 @@ html,
 /*size of the html page*/
 
 body {
-    height: 100%
+    height: 100%;
 }
 
 body {
     /* styles the contents of all body elements*/
-    font-family: 'Fira Mono';
+    font-family: "Fira Mono";
     color: var(--text-color);
     background-repeat: repeat;
     background-size: cover;
@@ -40,7 +40,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
-    height: 100%
+    height: 100%;
 }
 
 .box {
@@ -48,12 +48,15 @@ body {
     display: flex;
     align-items: center;
     padding: 15px 30px 15px 15px;
-    border: 1px solid var(--text-color)
+    border: 1px solid var(--text-color);
+    backdrop-filter: blur(3px);
+    filter: hue-rotate(190deg);
+    filter: drop-shadow(2px 0 0px rgba(78, 0, 167, 0.518)) invert(15%);
 }
 
 .box__image {
     /* Styles an box for the image */
-    margin-right: 30px
+    margin-right: 30px;
 }
 
 .box__image img {
@@ -61,24 +64,26 @@ body {
     display: block;
     width: 300px;
     height: 300px;
-    object-fit: cover
+    object-fit: cover;
+    filter: drop-shadow(0px 0px 200px rgb(0, 255, 30)) invert(75%);
 }
 
 .box__title {
     /* Styles the box for the title */
     font-weight: 400;
     font-size: 28px;
-    margin-bottom: 25px
+    margin-bottom: 25px;
 }
 
 .box__links {
     /* Styles the box for the links */
-    display: flex
+    display: flex;
+    filter: hue-rotate(90deg);
 }
 
 .links {
     /* Styles an unordered list of links  */
-    list-style: none
+    list-style: none;
 }
 
 
@@ -86,23 +91,25 @@ body {
 
 .links:not(:last-child) {
     /*Styles the Space between each link*/
-    margin-right: 50px
+    margin-right: 50px;
+    filter: hue-rotate(90deg);
 }
 
 .links__heading {
     /*Styles the headers of the links*/
     font-size: 18px;
-    color: #9a6de3
+    color: #9a6de3;
+    filter: hue-rotate(190deg);
 }
 
 .links__item:first-child {
     /*Styles the Space between the header and the links*/
-    margin-bottom: 10px
+    margin-bottom: 10px;
 }
 
 .links__item:not(:first-child) {
     /*Styles the overall addes space between links*/
-    margin-top: 5px
+    margin-top: 5px;
 }
 
 
@@ -114,23 +121,25 @@ body {
     line-height: 150%;
     color: inherit;
     text-decoration: none;
-    transition: color 0.2s linear
+    transition: color 0.2s linear;
+    text-shadow: 0 0 4px #ffffff;
+    filter: invert(100%);
 }
 
 .links__link:hover {
-    color: var(--text-hover-color)
+    color: var(--text-hover-color);
 }
 
 .box__image2 {
     /* Styles an box for the image */
-    margin-bottom: 0px
+    margin-bottom: 0px;
 }
 
 .box__image2 img {
     /* Styles an image within the box_image */
     display: grid;
     width: 300px;
-    position: sticky
+    position: sticky;
 }
 
 
@@ -139,10 +148,10 @@ body {
 @media (max-width: 991.98px) {
     /* this one is basicly all the code above */
     .box {
-        padding: 20px
+        padding: 20px;
     }
     .box__image {
-        display: none
+        display: none;
     }
 }
 
@@ -150,32 +159,32 @@ body {
     /* this one implements another wrapper without the picture */
     .wrapper {
         align-items: start;
-        justify-content: start
+        justify-content: start;
     }
     .box {
         width: 100%;
-        border: none
+        border: none;
     }
     .box__content {
-        width: 100%
+        width: 100%;
     }
     .box__links {
-        flex-wrap: wrap
+        flex-wrap: wrap;
     }
     .links {
         flex: 0 0 50%;
-        margin-bottom: 30px
+        margin-bottom: 30px;
     }
     .links:not(:last-child) {
-        margin-right: 0
+        margin-right: 0;
     }
 }
 
 @media (max-width: 575.98px) {
     .body {
-        background-image: url('/bgimages/phonebg.jpg') !important;
+        background-image: url("/bgimages/phonebg.jpg") !important;
     }
     .box {
-        padding: 15px
+        padding: 15px;
     }
 }
