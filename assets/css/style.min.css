@@ -48,8 +48,7 @@ body {
     display: flex;
     align-items: center;
     padding: 15px 30px 15px 15px;
-    border: 1px solid var(--text-color);
-    backdrop-filter: blur(3px);
+    border: 1px solid var(--text-color)
 }
 
 .box__image {
@@ -115,8 +114,7 @@ body {
     line-height: 150%;
     color: inherit;
     text-decoration: none;
-    transition: color 0.2s linear;
-    text-shadow: 0 0 4px #ffffff;
+    transition: color 0.2s linear
 }
 
 .links__link:hover {
@@ -130,8 +128,9 @@ body {
 
 .box__image2 img {
     /* Styles an image within the box_image */
-    display: flex;
+    display: grid;
     width: 300px;
+    position: sticky
 }
 
 
